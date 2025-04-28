@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+
+@theme {
+  --color-primary: #701eff;
+  --color-background: #ffffff;
+  --color-box: #f3f3f3;
+  --color-link: #364153;
+  --color-border: #adadad;
+  --box-sd: rgba(226, 232, 240, 0.5);
+  --heading-1: #172554;
+  --heading-2: #1f2937;
+  --heading-3: #374151;
+
+  --text-size-h1: 40px;
+  --text-size-h2: 30px;
+  --text-size-h3: 20px;
+  --text-size-p: 16px;
+  --text-size-link: 16px;
+
+  --font-weight-h1: 700;
+  --font-weight-h2: 600;
+  --font-weight-h3: 500;
+}
+
+html.dark {
+  --color-background: #030712;
+  --color-box: #111827;
+  --box-border: rgba(243, 244, 246, 0.1);
+  --box-sd: transparent;
+  --heading-1: #ffffff;
+  --heading-2: #f3f4f6;
+  --heading-3: #d1d5db;
+}
+
+@layer utilities {
+  .container {
+    margin-inline: auto;
+    padding-inline: 2rem;
+    max-width: 1440px;
+  }
+  .bg-body {
+    background-color: var(--color-background)
+  }
+  .bg-box {
+    background-color: var(--color-box);
+  }
+  .text-h1 {
+    color: var(--heading-1);
+    font-size: var(--text-size-h1);
+    font-weight: var(--font-weight-h1);
+  }
+  .text-h2 {
+    color: var(--heading-2);
+    font-size: var(--text-size-h2);
+    font-weight: var(--font-weight-h2);
+  }
+  .text-h3 {
+    color: var(--heading-3);
+    font-size: var(--text-size-h3);
+    font-weight: var(--font-weight-h3);
+  }
+  .text-p {
+    font-size: var(--text-size-p);
+    color: var(--heading-3);
+  }
+  .text-link {
+    font-size: var(--text-size-link);
+    font-weight: var(--font-weight-h2);
+    color: var(--heading-3);
+  }
+  .btn-primary {
+    font-size: 18px;
+    font-weight: 500;
+    background-color: var(--color-primary);
+    color: #ffffff;
+    cursor: pointer;
+    padding: 0 4px;
+    height: 50px;
+    min-width: 120px;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+        
+    &:hover {
+      background-color: color-mix(in oklch, var(--color-primary), black 10%);
+    }
+}
+.input {
+  background-color: var(--color-box);
+  color: var(--heading-1);
+  padding: 10px 20px;
+  min-width: 300px;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+}
+.svg {
+  color: var(--heading-1)
+}
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
