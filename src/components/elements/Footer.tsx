@@ -1,4 +1,3 @@
-import React from "react";
 import { Logo, NavItems } from "../shared";
 
 export const Footer = () => {
